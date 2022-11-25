@@ -52,7 +52,7 @@ export const SelectInput = styled.label`
 export const Option = styled.li`
   padding: 0.25rem 1rem;
   &:hover {
-    background: ${colors.backgroundSecondary};
+    background: ${colors.backgroundTertiary};
   }
 `;
 

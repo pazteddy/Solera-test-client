@@ -69,7 +69,7 @@ export const Actions = styled.div`
   display: flex;
   gap: 20px;
   border-top: 1px solid ${colors.tertiary};
-  background-color: ${colors.backgroundSecondary};
+  background-color: ${colors.backgroundTertiary};
   padding: 20px 30px;
 `;
 
