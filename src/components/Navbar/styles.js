@@ -22,6 +22,7 @@ export const Ul = styled.ul`
 `;
 
 export const Link = styled(NavLink)`
+  text-decoration: none;
   position: relative;
   color: ${colors.gray};
   &::after {
