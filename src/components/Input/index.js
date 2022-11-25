@@ -1,5 +1,6 @@
 import { useState } from "react";
 import * as S from "./styles";
+import PropTypes from "prop-types";
 
 function Input(props) {
   const [stateInput, setStateInput] = useState(false);
@@ -22,5 +23,15 @@ function Input(props) {
     />
   );
 }
+
+Input.propTypes = {
+  type: PropTypes.string,
+  placeholder: PropTypes.string,
+};
+
+Input.defaultProps = {
+  type: "text",
+  placeholder: "Placeholder",
+};
 
 export default Input;
