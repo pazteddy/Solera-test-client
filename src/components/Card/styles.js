@@ -39,7 +39,7 @@ export const Wrapper = styled.div`
   color: ${colors.primary};
   width: 300px;
   height: fit-content;
-  border: 1px solid #ccc;
+  border: 1px solid ${colors.tertiary};
   border-radius: 5px;
   box-shadow: 1px 4px 3px 0px rgba(0, 0, 0, 0.35);
   -webkit-box-shadow: 1px 4px 3px 0px rgba(0, 0, 0, 0.35);
@@ -68,8 +68,8 @@ export const Description = styled.p``;
 export const Actions = styled.div`
   display: flex;
   gap: 20px;
-  border-top: 1px solid #ccc;
-  background-color: #f5f5f5;
+  border-top: 1px solid ${colors.tertiary};
+  background-color: ${colors.backgroundSecondary};
   padding: 20px 30px;
 `;
 

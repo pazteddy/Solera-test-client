@@ -6,7 +6,7 @@ export const InputContainer = styled.div`
   padding: 10px;
   align-items: center;
 
-  border: 1px solid #ccc;
+  border: 1px solid ${colors.tertiary};
 
   border-radius: 5px;
   gap: 0.5rem;
@@ -29,7 +29,7 @@ export const Input = styled.input`
 
 export const Textarea = styled.textarea`
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid ${colors.tertiary};
   width: 100%;
   border-radius: 5px;
   ${({ stateInput }) =>
