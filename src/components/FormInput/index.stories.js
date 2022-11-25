@@ -1,27 +1,27 @@
 import { Wrapper } from "../stylesStories";
-import Input from "./index";
+import FormInput from "./index";
 
 export default {
-  title: "Components/Input",
-  component: Input,
+  title: "Components/FormInput",
+  component: FormInput,
 };
 
 const Template = (args) => (
   <Wrapper>
-    <Input {...args} />
+    <FormInput {...args} />
   </Wrapper>
 );
 
 export const Default = Template.bind({});
 
 Default.args = {
+  label: "Nombre",
   type: "text",
-  placeholder: "Placeholder",
 };
 
 export const Textarea = Template.bind({});
 
 Textarea.args = {
+  label: "Descripción",
   type: "textarea",
-  placeholder: "Placeholder",
 };

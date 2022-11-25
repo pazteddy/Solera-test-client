@@ -1,6 +1,8 @@
 import Card from "./index";
 
 import styled from "@emotion/styled";
+import { fonts } from "../../assets/typography";
+import { colors } from "../../assets/colors";
 
 export default {
   title: "Components/Card",
@@ -8,6 +10,8 @@ export default {
 };
 
 const Wrapper = styled.div`
+  font-family: ${fonts.primary};
+  color: ${colors.primary};
   * {
     margin: 0;
     padding: 0;
