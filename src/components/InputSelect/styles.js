@@ -39,7 +39,7 @@ export const NativeSelect = styled.ul`
 
 export const SelectInput = styled.label`
   position: relative;
-  width: fit-content;
+  ${(props) => props.width && `width: ${props.width}`};
   display: flex;
   flex-direction: column;
   gap: 0.5rem;

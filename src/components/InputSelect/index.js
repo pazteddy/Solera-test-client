@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
 
 import { BsChevronUp, BsChevronDown } from "react-icons/bs";
 
-function InputSelect({ options, onChange, ...props }) {
+function InputSelect({ options, onChange, width, ...props }) {
   const [isOpen, setIsOpen] = useState(false);
   const [value, setValue] = useState(props.value);
 
@@ -17,8 +17,10 @@ function InputSelect({ options, onChange, ...props }) {
     setIsOpen(false);
   };
 
+  const propWidth = { width: width };
+
   return (
-    <S.SelectInput>
+    <S.SelectInput {...propWidth}>
       <Input
         disabled
         name={props.name}
@@ -61,12 +63,14 @@ InputSelect.propTypes = {
   placeholder: PropTypes.string,
   options: PropTypes.array.isRequired,
   onChange: PropTypes.func,
+  width: PropTypes.string,
 };
 
 InputSelect.defaultProps = {
   placeholder: "Select",
   options: [],
   onChange: () => {},
+  width: "fit-content",
 };
 
 export default InputSelect;
