@@ -2,10 +2,10 @@ import { useState } from "react";
 import * as S from "./styles";
 import PropTypes from "prop-types";
 
-function Input(props) {
+function Input({ leftIcon, rightIcon, ...props }) {
   const [stateInput, setStateInput] = useState(false);
 
-  const state = { ...props, stateInput: stateInput };
+  const state = { stateInput: stateInput };
 
   if (props.type === "textarea") {
     return (
@@ -27,19 +27,23 @@ function Input(props) {
   }
 
   return (
-    <S.Input
-      {...state}
-      onBlur={(e) => {
-        if (e.target.value !== "") {
+    <S.InputContainer {...state}>
+      {leftIcon}
+      <S.Input
+        {...props}
+        onBlur={(e) => {
+          if (e.target.value !== "") {
+            setStateInput(true);
+          } else {
+            setStateInput(false);
+          }
+        }}
+        onFocus={() => {
           setStateInput(true);
-        } else {
-          setStateInput(false);
-        }
-      }}
-      onFocus={() => {
-        setStateInput(true);
-      }}
-    />
+        }}
+      />
+      {rightIcon}
+    </S.InputContainer>
   );
 }
 
