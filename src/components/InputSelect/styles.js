@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { colors } from "../../assets/colors";
 export const NativeSelect = styled.ul`
   width: 100%;
+  z-index: 100;
   position: absolute;
   top: 2.8rem;
   list-style: none;
