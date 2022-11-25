@@ -3,12 +3,16 @@ import { NavLink } from "react-router-dom";
 import { colors } from "../../assets/colors";
 
 export const Nav = styled.nav`
+  ${({ backgroundColor }) => ` background-color: ${backgroundColor};`}
   width: 100%;
-  height: 50px;
-  background-color: ${colors.backgroundSecondary};
   display: flex;
   align-items: center;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
+  gap: 3rem;
+`;
+
+export const Logo = styled.div`
+  height: 40px;
 `;
 
 export const Ul = styled.ul`
