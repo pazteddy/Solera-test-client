@@ -25,3 +25,10 @@ Textarea.args = {
   label: "Descripción",
   type: "textarea",
 };
+
+export const Select = Template.bind({});
+Select.args = {
+  label: "Select",
+  type: "select",
+  options: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+};
