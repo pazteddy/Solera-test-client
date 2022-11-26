@@ -1,42 +1,49 @@
+import { v4 as uuid } from "uuid";
 import { colors } from "./assets/colors";
 
 export const services = [
   {
-    id: 1,
+    id: uuid(),
     name: "Electricidad",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    service: "Hogar",
+    service: "hogar",
   },
   {
-    id: 2,
+    id: uuid(),
     name: "Auxilio Mecánico",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     service: "autos",
   },
   {
-    id: 3,
+    id: uuid(),
     name: "Chofer reemplazo",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     service: "autos",
   },
   {
-    id: 4,
+    id: uuid(),
     name: "Medico a domicilio",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     service: "salud",
   },
   {
-    id: 5,
+    id: uuid(),
     name: "Ambulancia",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     service: "salud",
   },
   {
-    id: 6,
+    id: uuid(),
     name: "Gasfitero",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     animationIterationCount: "infinite",
     service: "hogar",
+  },
+  {
+    id: uuid(),
+    name: "Compras",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    service: "otros",
   },
 ];
 export const types = [
@@ -45,16 +52,16 @@ export const types = [
     to: "todos",
   },
   {
-    name: "hogar",
-    to: "hogar",
+    name: "autos",
+    to: "autos",
   },
   {
     name: "salud",
     to: "salud",
   },
   {
-    name: "mascotas",
-    to: "mascotas",
+    name: "hogar",
+    to: "hogar",
   },
   {
     name: "otros",
@@ -63,7 +70,9 @@ export const types = [
 ];
 
 export const typesServicesArray = types.map((type) => {
-  return type.name;
+  if (type.name !== "todos") {
+    return type.name;
+  }
 });
 
 export const ContainerStyleCard = (width) => {
