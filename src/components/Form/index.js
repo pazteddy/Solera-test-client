@@ -31,9 +31,14 @@ function Form() {
       setForm(initialForm);
     }
   };
+
+  const handleCancel = (e) => {
+    e.preventDefault();
+    setForm(initialForm);
+  };
   return (
-    <S.Wrapper onSubmit={handleSubmit}>
-      <S.Form>
+    <S.Wrapper>
+      <S.Form id="form" onSubmit={handleSubmit}>
         <FormInput
           type="text"
           label="Nombre"
@@ -66,10 +71,14 @@ function Form() {
         />
         {error && <Error>{error}</Error>}
       </S.Form>
-
       <S.WrapperButtons>
-        <Button type="submit" label="Grabar" color="blue" />
-        <Button type="button" label="Cancelar" color="red" />
+        <Button type="submit" form="form" label="Grabar" color="blue" />
+        <Button
+          type="button"
+          label="Cancelar"
+          color="red"
+          onClick={handleCancel}
+        />
       </S.WrapperButtons>
     </S.Wrapper>
   );
