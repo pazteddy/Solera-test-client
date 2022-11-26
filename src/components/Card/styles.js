@@ -5,7 +5,7 @@ import {
   ContainerStyleButton,
   ContainerStyleCard,
   ContainerStyleContent,
-} from "../../utils";
+} from "../../utilsStyles";
 
 const rotate = function (deg) {
   return `

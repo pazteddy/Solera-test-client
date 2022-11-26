@@ -4,7 +4,7 @@ import {
   ContainerStyleButton,
   ContainerStyleCard,
   ContainerStyleContent,
-} from "../../utils";
+} from "../../utilsStyles";
 
 export const Wrapper = styled.div`
   ${ContainerStyleCard("400px")}
