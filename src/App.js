@@ -8,9 +8,27 @@ import { useServices } from "./context";
 import Form from "./components/Form";
 
 function App() {
-  const { dataFilter, removeService } = useServices();
+  const { dataFilter, removeService, data, dispatchForm } = useServices();
   const handleRemove = (id) => {
     removeService(id);
+  };
+
+  const handleEdit = (idCard) => {
+    // console.log(id);
+    console.log(idCard);
+    const { id, name, description, service } = data.find(
+      (service) => service.id === idCard
+    );
+
+    dispatchForm({
+      type: "setForm",
+      payload: {
+        id: id,
+        name: name,
+        description: description,
+        service: service,
+      },
+    });
   };
   return (
     <>
@@ -37,7 +55,14 @@ function App() {
           `}
         >
           {dataFilter.map((service) => {
-            return <Card key={service.id} {...service} remove={handleRemove} />;
+            return (
+              <Card
+                key={service.id}
+                {...service}
+                remove={handleRemove}
+                edit={handleEdit}
+              />
+            );
           })}
         </div>
 
