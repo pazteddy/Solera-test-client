@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useId, useState } from "react";
+import { v4 as uuid } from "uuid";
 import { useServices } from "../../context";
 import { typesServicesArray } from "../../utils";
 import Button from "../Button";
@@ -27,15 +28,20 @@ function Form() {
       }, 3000);
     } else {
       if (form.id) {
-        // Edit
+        // Update Service
         updateService(form);
       } else {
-        // Save
-        addService(form);
+        // Generate unique id Card
+        const uniqueId = uuid();
+
+        // Save service
+        const { id, ...rest } = form;
+        const newForm = { id: uniqueId, ...rest };
+        addService(newForm);
       }
 
       dispatchForm({ type: "setForm", payload: initialForm });
-      console.log(form);
+      // console.log(form);
     }
   };
 
