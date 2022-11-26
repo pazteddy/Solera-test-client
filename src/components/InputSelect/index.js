@@ -23,11 +23,11 @@ function InputSelect({ options, width, onChange, value, ...props }) {
 
   const ref = useRef();
 
-  const target = { name: props.name, value: inputValue.toLowerCase() };
+  //const target = { name: props.name, value: inputValue.toLowerCase() };
   useEffect(() => {
-    onChange(target);
+    //onChange(target);
     // another way to get the value of input is to make a reference to the label and go down from child to input
-    // onChange(ref.current.children[0].children[0]);
+    onChange(ref.current.children[0].children[0]);
   }, [inputValue]);
 
   return (
