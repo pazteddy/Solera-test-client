@@ -19,9 +19,12 @@ export const Wrapper = styled.div`
   *::-webkit-scrollbar {
     width: 0.3rem;
   }
+  box-sizing: border-box;
 
   * {
     font-family: ${fonts.primary};
     color: ${colors.primary};
+
+    box-sizing: border-box;
   }
 `;
