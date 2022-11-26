@@ -6,13 +6,18 @@ import { ServicesContext } from "./servicesContext";
 import { servicesReducer } from "./servicesReducer";
 
 export const ServicesProvider = ({ children }) => {
-  const [data, dispatch] = useReducer(servicesReducer, []);
+  const [data, dispatch] = useReducer(
+    servicesReducer,
+    localStorage.getItem("data")
+      ? JSON.parse(localStorage.getItem("data"))
+      : services
+  );
   const [dataFilter, dispatchFilter] = useReducer(filterReducer, []);
   let location = useLocation();
 
   useEffect(() => {
-    dispatch({ type: "setServices", payload: services });
-  }, []);
+    window.localStorage.setItem("data", JSON.stringify(data));
+  }, [data]);
 
   useEffect(() => {
     if (location.pathname.slice(1) === "todos") {
