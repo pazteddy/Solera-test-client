@@ -47,6 +47,10 @@ export const SelectInput = styled.label`
     text-transform: uppercase;
     color: ${colors.darkGray};
   }
+
+  & input {
+    text-transform: capitalize;
+  }
 `;
 
 export const Option = styled.li`
@@ -54,6 +58,8 @@ export const Option = styled.li`
   &:hover {
     background: ${colors.backgroundTertiary};
   }
+
+  text-transform: capitalize;
 `;
 
 export const Icon = styled.div`
