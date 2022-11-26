@@ -1,6 +1,11 @@
 import { keyframes } from "@emotion/css";
 import styled from "@emotion/styled";
 import { colors } from "../../assets/colors";
+import {
+  ContainerStyleButton,
+  ContainerStyleCard,
+  ContainerStyleContent,
+} from "../../utils";
 
 const rotate = function (deg) {
   return `
@@ -36,14 +41,7 @@ const animationEdit = keyframes`
 `;
 
 export const Wrapper = styled.div`
-  color: ${colors.primary};
-  width: 300px;
-  height: fit-content;
-  border: 1px solid ${colors.tertiary};
-  border-radius: 5px;
-  box-shadow: 1px 4px 3px 0px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 1px 4px 3px 0px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 1px 4px 3px 0px rgba(0, 0, 0, 0.35);
+  ${ContainerStyleCard("300px")}
 
   ${(props) =>
     props.remove &&
@@ -54,11 +52,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled.div`
-  background-color: ${colors.white};
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px 30px;
+  ${ContainerStyleContent}
 `;
 
 export const Title = styled.h2``;
@@ -66,11 +60,7 @@ export const Title = styled.h2``;
 export const Description = styled.p``;
 
 export const Actions = styled.div`
-  display: flex;
-  gap: 20px;
-  border-top: 1px solid ${colors.tertiary};
-  background-color: ${colors.backgroundTertiary};
-  padding: 20px 30px;
+  ${ContainerStyleButton}
 `;
 
 export const Action = styled.button`
@@ -81,5 +71,3 @@ export const Action = styled.button`
   color: ${colors.secondary};
   font-weight: 600;
 `;
-
-const Animation = () => {};
