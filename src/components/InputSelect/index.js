@@ -1,5 +1,5 @@
 import { css } from "@emotion/css";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Input from "../Input";
 
 import * as S from "./styles";
@@ -16,7 +16,6 @@ function InputSelect({ options, onChange, width, ...props }) {
     setValue(option);
     setIsOpen(false);
   };
-
   const propWidth = { width: width };
 
   return (
@@ -26,10 +25,6 @@ function InputSelect({ options, onChange, width, ...props }) {
         name={props.name}
         type="text"
         value={value || ""}
-        onChange={(e) => {
-          onChange(e);
-          setValue(e.target.value);
-        }}
         rightIcon={
           <S.Icon
             onClick={() => {
