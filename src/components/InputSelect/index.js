@@ -12,9 +12,12 @@ function InputSelect({ options, width, onChange, value, ...props }) {
   const [isOpen, setIsOpen] = useState(false);
   const [inputValue, setInputValue] = useState(value);
 
+  const [stateInput, setStateInput] = useState(false);
+
   const handleSelect = (option) => {
     setInputValue(option);
     setIsOpen(false);
+    setStateInput(true);
   };
   const propWidth = { width: width };
 
@@ -31,6 +34,7 @@ function InputSelect({ options, width, onChange, value, ...props }) {
     <S.SelectInput {...propWidth} ref={ref}>
       <Input
         disabled
+        stateInput={stateInput}
         name={props.name}
         type="text"
         value={value}
