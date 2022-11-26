@@ -11,6 +11,7 @@ function Input({ leftIcon, rightIcon, ...props }) {
     return (
       <S.Textarea
         {...state}
+        {...props}
         rows="4"
         onBlur={(e) => {
           if (e.target.value !== "") {
