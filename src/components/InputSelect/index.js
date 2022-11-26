@@ -8,24 +8,24 @@ import PropTypes from "prop-types";
 
 import { BsChevronUp, BsChevronDown } from "react-icons/bs";
 
-function InputSelect({ options, width, onChange, ...props }) {
+function InputSelect({ options, width, onChange, value, ...props }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [value, setValue] = useState("");
+  const [inputValue, setInputValue] = useState(value);
 
   const handleSelect = (option) => {
-    setValue(option);
+    setInputValue(option);
     setIsOpen(false);
   };
   const propWidth = { width: width };
 
   const ref = useRef();
 
-  const target = { name: props.name, value: value.toLowerCase() };
+  const target = { name: props.name, value: inputValue.toLowerCase() };
   useEffect(() => {
     onChange(target);
     // another way to get the value of input is to make a reference to the label and go down from child to input
     // onChange(ref.current.children[0].children[0]);
-  }, [value]);
+  }, [inputValue]);
 
   return (
     <S.SelectInput {...propWidth} ref={ref}>
@@ -33,7 +33,7 @@ function InputSelect({ options, width, onChange, ...props }) {
         disabled
         name={props.name}
         type="text"
-        value={value}
+        value={inputValue}
         rightIcon={
           <S.Icon
             onClick={() => {
