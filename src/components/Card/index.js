@@ -2,7 +2,7 @@ import * as S from "./styles";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-function Card({ title, description, ...props }) {
+function Card({ name, description, ...props }) {
   const [remove, setRemove] = useState(false);
   const [edit, setEdit] = useState(false);
 
@@ -29,7 +29,7 @@ function Card({ title, description, ...props }) {
   return (
     <S.Wrapper {...stateRemove}>
       <S.Content>
-        <S.Title>{title}</S.Title>
+        <S.Title>{name}</S.Title>
         <S.Description>{description}</S.Description>
       </S.Content>
       <S.Actions>
