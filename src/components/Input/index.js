@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as S from "./styles";
 import PropTypes from "prop-types";
 
 function Input({ leftIcon, rightIcon, ...props }) {
   const [stateInput, setStateInput] = useState(false);
 
-  const state = { stateInput: stateInput };
+  useEffect(() => {
+    if (props.value === "") {
+      setStateInput(false);
+    }
+  }, [props.value]);
 
+  const state = { stateInput: props.stateInput || stateInput };
   if (props.type === "textarea") {
     return (
       <S.Textarea
