@@ -8,9 +8,9 @@ import PropTypes from "prop-types";
 
 import { BsChevronUp, BsChevronDown } from "react-icons/bs";
 
-function InputSelect({ options, onChange, width, ...props }) {
+function InputSelect({ options, width, onChange, ...props }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [value, setValue] = useState(props.value);
+  const [value, setValue] = useState("");
 
   const handleSelect = (option) => {
     setValue(option);
@@ -18,13 +18,22 @@ function InputSelect({ options, onChange, width, ...props }) {
   };
   const propWidth = { width: width };
 
+  const ref = useRef();
+
+  const target = { name: props.name, value: value.toLowerCase() };
+  useEffect(() => {
+    onChange(target);
+    // another way to get the value of input is to make a reference to the label and go down from child to input
+    // onChange(ref.current.children[0].children[0]);
+  }, [value]);
+
   return (
-    <S.SelectInput {...propWidth}>
+    <S.SelectInput {...propWidth} ref={ref}>
       <Input
         disabled
         name={props.name}
         type="text"
-        value={value || ""}
+        value={value}
         rightIcon={
           <S.Icon
             onClick={() => {
