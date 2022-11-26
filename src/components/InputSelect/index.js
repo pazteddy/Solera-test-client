@@ -33,7 +33,7 @@ function InputSelect({ options, width, onChange, value, ...props }) {
         disabled
         name={props.name}
         type="text"
-        value={inputValue}
+        value={value}
         rightIcon={
           <S.Icon
             onClick={() => {
