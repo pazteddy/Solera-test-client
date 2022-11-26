@@ -10,17 +10,10 @@ import * as S from "./styles";
 function Form() {
   const [error, setError] = useState("");
 
-  const { addService } = useServices();
-
-  const initialForm = {
-    name: "",
-    description: "",
-    service: "",
-  };
-  const [form, setForm] = useState(initialForm);
+  const { addService, initialForm, form, dispatchForm } = useServices();
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.name]: e.value });
+    dispatchForm({ type: "setForm", payload: { [e.name]: e.value } });
   };
 
   const handleSubmit = (e) => {
@@ -32,14 +25,14 @@ function Form() {
       }, 3000);
     } else {
       addService(form);
-      setForm(initialForm);
+      dispatchForm({ type: "setForm", payload: initialForm });
       console.log(form);
     }
   };
 
   const handleCancel = (e) => {
     e.preventDefault();
-    setForm(initialForm);
+    dispatchForm({ type: "setForm", payload: initialForm });
   };
   return (
     <S.Wrapper>
