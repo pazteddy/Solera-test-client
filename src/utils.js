@@ -41,23 +41,23 @@ export const services = [
 ];
 export const types = [
   {
-    name: "Todos",
+    name: "todos",
     to: "todos",
   },
   {
-    name: "Hogar",
+    name: "hogar",
     to: "hogar",
   },
   {
-    name: "Salud",
+    name: "salud",
     to: "salud",
   },
   {
-    name: "Mascotas",
+    name: "mascotas",
     to: "mascotas",
   },
   {
-    name: "Otros",
+    name: "otros",
     to: "otros",
   },
 ];
