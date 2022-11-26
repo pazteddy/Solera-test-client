@@ -10,7 +10,8 @@ import * as S from "./styles";
 function Form() {
   const [error, setError] = useState("");
 
-  const { addService, initialForm, form, dispatchForm } = useServices();
+  const { addService, initialForm, form, dispatchForm, updateService } =
+    useServices();
 
   const handleChange = (e) => {
     dispatchForm({ type: "setForm", payload: { [e.name]: e.value } });
@@ -18,13 +19,21 @@ function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (form.name === "" || form.description === "" || form.service === "") {
       setError("Complete todos los campos");
       setTimeout(() => {
         setError(null);
       }, 3000);
     } else {
-      addService(form);
+      if (form.id) {
+        // Edit
+        updateService(form);
+      } else {
+        // Save
+        addService(form);
+      }
+
       dispatchForm({ type: "setForm", payload: initialForm });
       console.log(form);
     }
@@ -70,7 +79,12 @@ function Form() {
         {error && <Error>{error}</Error>}
       </S.Form>
       <S.WrapperButtons>
-        <Button type="submit" form="form" label="Grabar" color="blue" />
+        <Button
+          type="submit"
+          form="form"
+          label={form.id ? "Editar" : "Grabar"}
+          color="blue"
+        />
         <Button
           type="button"
           label="Cancelar"
