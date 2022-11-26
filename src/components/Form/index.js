@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useServices } from "../../context";
 import { typesServicesArray } from "../../utils";
 import Button from "../Button";
 import Error from "../Error";
@@ -8,6 +9,9 @@ import * as S from "./styles";
 
 function Form() {
   const [error, setError] = useState("");
+
+  const { addService } = useServices();
+
   const initialForm = {
     name: "",
     description: "",
@@ -27,8 +31,9 @@ function Form() {
         setError(null);
       }, 3000);
     } else {
-      console.log(form);
+      addService(form);
       setForm(initialForm);
+      console.log(form);
     }
   };
 
