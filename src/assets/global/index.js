@@ -82,6 +82,20 @@ export const reset = css`
   *::-webkit-scrollbar {
     width: 0.3rem;
   }
+  &::-webkit-scrollbar-thumb {
+    background: ${colors.primary};
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: ${colors.primary};
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Cambiamos el fondo cuando esté en active */
+  &::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
 `;
 
 export const global = css`
