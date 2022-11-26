@@ -1,35 +1,28 @@
 import { Wrapper } from "../stylesStories";
 import InputSelect from "./index";
 
-export default {
-  title: "Components/InputSelect",
-  component: InputSelect,
-};
+import { storiesOf } from "@storybook/react";
+import useState from "storybook-addon-state";
 
-const Template = (args) => (
-  <Wrapper>
-    <InputSelect {...args} />
-  </Wrapper>
-);
+storiesOf("Components/InputSelect", module)
+  .add("Default", () => (
+    <Wrapper>
+      <InputSelect placeholder="Seleccione una opción" />
+    </Wrapper>
+  ))
+  .add("Options", () => {
+    const [value, setValue] = useState("valueInput", "");
 
-export const Default = Template.bind({});
-
-Default.args = {
-  placeholder: "Seleccione una opción",
-};
-
-export const WithOptions = Template.bind({});
-
-WithOptions.args = {
-  placeholder: "Seleccione una opción",
-  options: [
-    "Opción 1",
-    "Opción 2",
-    "Opción 3",
-    "Opción 4",
-    "Opción 5",
-    "Opción 6",
-    "Opción 7",
-    "Opción 8",
-  ],
-};
+    return (
+      <Wrapper>
+        <InputSelect
+          placeholder="Seleccione una opción"
+          value={value}
+          options={["Opción 1", "Opción 2", "Opción 3"]}
+          onChange={(e) => {
+            setValue(e.value);
+          }}
+        />
+      </Wrapper>
+    );
+  });
