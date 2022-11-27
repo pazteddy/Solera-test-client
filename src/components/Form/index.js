@@ -64,7 +64,7 @@ function Form() {
         />
         <FormInput
           type="textarea"
-          label="Description"
+          label="Descripción"
           name="description"
           value={form.description}
           onChange={(e) => {
@@ -74,13 +74,13 @@ function Form() {
         />
         <FormInput
           type="select"
-          label="Select service"
+          label="Seleccionar servicio"
           name="service"
           value={form.service}
           onChange={handleChange}
-          placeholder="Select one of the following services"
           width="100%"
           options={typesServicesArray}
+          placeholder="Seleccionar servicio"
         />
         {error && <Error>{error}</Error>}
       </S.Form>
@@ -89,7 +89,7 @@ function Form() {
           type="submit"
           form="form"
           label={form.id ? "Editar" : "Grabar"}
-          color="blue"
+          color={form.id ? "blue" : "#238636"}
         />
         <Button
           type="button"

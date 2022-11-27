@@ -33,8 +33,8 @@ function Card({ name, description, ...props }) {
         <S.Description>{description}</S.Description>
       </S.Content>
       <S.Actions>
-        <S.Action onClick={handleEdit}>Edit</S.Action>
-        <S.Action onClick={handleRemove}>Remove</S.Action>
+        <S.Action onClick={handleEdit}>Editar</S.Action>
+        <S.Action onClick={handleRemove}>Eliminar</S.Action>
       </S.Actions>
     </S.Wrapper>
   );
