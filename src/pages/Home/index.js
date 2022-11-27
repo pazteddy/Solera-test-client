@@ -8,7 +8,7 @@ import { Container, Title } from "./styles";
 function Home() {
   return (
     <>
-      <Title>Services</Title>
+      <Title>Servicios</Title>
       <Navbar data={types} />
       <Container>
         <ListCard />
