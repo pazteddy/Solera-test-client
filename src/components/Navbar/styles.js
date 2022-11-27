@@ -25,6 +25,7 @@ export const Link = styled(NavLink)`
   text-decoration: none;
   position: relative;
   color: ${colors.gray};
+  text-transform: capitalize;
   &::after {
     content: "";
     left: 0;
