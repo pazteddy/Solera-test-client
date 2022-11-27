@@ -60,7 +60,7 @@ Input.propTypes = {
 
 Input.defaultProps = {
   type: "text",
-  placeholder: "Placeholder",
+  placeholder: "",
 };
 
 export default Input;
