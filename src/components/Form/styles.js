@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { colors } from "../../assets/colors";
 import {
   ContainerStyleButton,
   ContainerStyleCard,
@@ -7,7 +6,7 @@ import {
 } from "../../utilsStyles";
 
 export const Wrapper = styled.div`
-  ${ContainerStyleCard("400px")}
+  ${ContainerStyleCard("350px")}
 `;
 export const Form = styled.form`
   ${ContainerStyleContent}
