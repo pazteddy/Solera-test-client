@@ -2,7 +2,7 @@
 
 This project consists of building an application, where the user can initially see all his services, he can also filter the services by category. Also, the user can add, edit and delete a service.
 
-##Packages we are using:
+## Packages we are using:
 
 - react-router-dom(^6.4.2): [link](https://reactrouter.com/docs/en/v6/getting-started/overview)
 - storybook: [link](https://storybook.js.org/)
@@ -42,6 +42,8 @@ $ npm run storybook
 <div align="center" style="display:flex; flex-wrap: wrap;" >
   <img src="https://github.com/jhosepct/Solera-test-client/blob/main/Design.png" title="hover text">
   <img src="https://github.com/jhosepct/Solera-test-client/blob/main/Desktop.png" title="hover text">
-  <img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-1.png" title="hover text">
-  <img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-2.png" title="hover text">
+  <div align="center" style="display:flex; gap: 5px;">
+    <img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-1.png" title="hover text">
+    <img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-2.png" title="hover text">
+  </div>
 </div>
