@@ -1,5 +1,6 @@
 import { useEffect, useReducer } from "react";
 import { useLocation } from "react-router";
+import { StorageData } from "../config";
 import { services } from "../utils";
 import { filterReducer } from "./filterReducer";
 import { formReducer } from "./formReducer";
@@ -10,8 +11,8 @@ export const ServicesProvider = ({ children }) => {
   // State global  to services
   const [data, dispatch] = useReducer(
     servicesReducer,
-    localStorage.getItem("data")
-      ? JSON.parse(localStorage.getItem("data"))
+    localStorage.getItem(StorageData)
+      ? JSON.parse(localStorage.getItem(StorageData))
       : services
   );
 
@@ -31,7 +32,7 @@ export const ServicesProvider = ({ children }) => {
   let location = useLocation();
 
   useEffect(() => {
-    window.localStorage.setItem("data", JSON.stringify(data));
+    window.localStorage.setItem(StorageData, JSON.stringify(data));
   }, [data]);
 
   useEffect(() => {
