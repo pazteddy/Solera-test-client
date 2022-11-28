@@ -1,24 +1,37 @@
-import React from "react";
+import { useState } from "react";
 import Menu from "./Layout/Menu";
 import MenuItem from "./Layout/MenuItem";
 import Navegation from "./Layout/Navegation";
 import PropTypes from "prop-types";
 import { colors } from "../../assets/colors";
-import { Logo } from "./styles";
+import { Icon, Logo } from "./styles";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from "react-icons/ai";
 
 function Navbar({ data, logo, ...props }) {
+  const [open, setOpen] = useState(false);
+
+  const state = { open: open, setOpen: setOpen };
+
   return (
-    <Navegation {...props}>
+    <Navegation {...props} {...state}>
       <Logo>{logo && <img src={logo} alt="Solera-logo" />}</Logo>
-      <Menu>
+      <Menu {...state}>
         {data.map((item, i) => {
           return (
-            <MenuItem key={i} to={item.to}>
+            <MenuItem key={i} to={item.to} onClick={() => setOpen(false)}>
               {item.name}
             </MenuItem>
           );
         })}
       </Menu>
+      <Icon
+        onClick={() => {
+          setOpen(!open);
+        }}
+      >
+        {open ? <AiOutlineClose /> : <GiHamburgerMenu />}
+      </Icon>
     </Navegation>
   );
 }
