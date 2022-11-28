@@ -41,7 +41,7 @@ function Card({ name, description, ...props }) {
 }
 
 Card.prototype = {
-  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   edit: PropTypes.func.isRequired,
   remove: PropTypes.func.isRequired,
