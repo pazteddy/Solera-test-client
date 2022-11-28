@@ -22,6 +22,30 @@ export const Nav = styled.nav`
       `;
       }
     }}
+
+    ${({ open }) => {
+      if (open) {
+        return `
+        &::before {
+          position: absolute;
+          content: "Servicios";
+          font-weight: bold;
+          font-size: 1.5rem;
+          color: ${colors.white};
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 2px;
+          background-color: ${colors.white};
+          margin-top: 47px;
+        }
+        `;
+      }
+    }}
+  }
 `;
 
 export const Icon = styled.div`
