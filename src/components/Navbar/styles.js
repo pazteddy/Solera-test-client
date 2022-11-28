@@ -69,6 +69,16 @@ export const Logo = styled.div`
   @media (max-width: 768px) {
     align-self: flex-start;
   }
+
+  ${({ open }) => {
+    if (open) {
+      return `
+      @media (max-width: 520px) {
+        opacity: 0;
+      }
+    `;
+    }
+  }}
 `;
 
 export const Ul = styled.ul`
