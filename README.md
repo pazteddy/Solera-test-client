@@ -1,8 +1,26 @@
 # Solera Frontend
 
-This project consists of building an application, where the user can initially see all his services, he can also filter the services by category. Also, the user can add, edit and delete a service.
+Este proyecto consiste en construir una aplicación, donde el usuario inicialmente puede ver todos sus servicios, también puede filtrar los servicios por categoría. Además, el usuario puede agregar, editar y eliminar un servicio.
 
-## Packages we are using:
+- Demo: [Solera](https://solera-app.vercel.app/)
+
+<img src="https://github.com/jhosepct/Solera-test-client/blob/main/Design.png" title="hover text">
+
+- Diseño Movil
+
+<img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-1.png" title="imagen 1" width="200px"><img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-2.png" title="imagen 2" width="200px">
+
+- Lista de servicios
+
+<img src="https://github.com/jhosepct/Solera-test-client/blob/main/Desktop.png" title="hover text">
+<div align="center" style="display:flex; flex-wrap: wrap;" >
+</div>
+
+- Filtrar servicios
+
+<img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-3.png" title="imagen 3"
+
+## Paquetes usados:
 
 - react-router-dom(^6.4.2): [link](https://reactrouter.com/docs/en/v6/getting-started/overview)
 - storybook: [link](https://storybook.js.org/)
@@ -10,42 +28,80 @@ This project consists of building an application, where the user can initially s
 - react-icons: [link](https://react-icons.github.io/react-icons/)
 - uuidv4: [link](https://github.com/thenativeweb/uuidv4)
 
-## Quick start
+## Instalación
 
-- Make sure your NodeJS and npm versions are up to date for `React ^18.2.0`
+- Asegúrese de que sus versiones de NodeJS y npm estén actualizadas para `React ^18.2.0`
 
-- Install dependencies: `npm install` or `yarn`
-  A little intro about the installation.
+- Instalar dependencias: `npm install` or `yarn`
+  Una pequeña introducción sobre la instalación.
 
 ```
-$ npm i
+$ npm install
 ```
 
-- Start the server: `npm run start`
+- Inicie el servidor: `npm run start`
 
 ```
 $ npm run start
 ```
 
-- Views are on: `localhost:3000`
+- Las vistas están en: `localhost:3000`
 
-- Start storybook: `npm run storybook`
+- Inicie storybook: `npm run storybook`
 
 ```
 $ npm run storybook
 ```
 
-- Views are on: `localhost:6006`
+- Las vistas están en: `localhost:6006`
 
-## Demo:
+## Props
 
-- Solera App: [link](https://solera-app.vercel.app/)
+#### Navbar
 
-<div align="center" style="display:flex; flex-wrap: wrap;" >
-  <img src="https://github.com/jhosepct/Solera-test-client/blob/main/Design.png" title="hover text">
-  <img src="https://github.com/jhosepct/Solera-test-client/blob/main/Desktop.png" title="hover text">
-  <div align="center" style="display:flex; gap: 5px;">
-    <img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-1.png" title="hover text">
-    <img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-2.png" title="hover text">
-  </div>
-</div>
+| Prop            | Tipo     | Defecto | Requerido | Descripción                                                                 |
+| --------------- | -------- | ------- | --------- | --------------------------------------------------------------------------- |
+| data            | `array`  | no      | yes       | Genera la barra de navegación con sus enlaces                               |
+| logo            | `String` | `false` | no        | Establecer valores `verdaderos` revelará el logo y `falso` ocultará el logo |
+| backgroundColor | `string` | `false` | no        | Cambiar el fondo de la barra de navegación                                  |
+
+#### Card
+
+| Prop        | Tipo       | Defecto | Requerido | Descripción                                                                                   |
+| ----------- | ---------- | ------- | --------- | --------------------------------------------------------------------------------------------- |
+| name        | `String`   | no      | si        | Title del component Card                                                                      |
+| description | `String`   | no      | si        | Descripción de la carta                                                                       |
+| edit        | `Function` | ()=>{}  | no        | Realiza una animación y manda a llamar al metodo onClick con parametro id del componente Card |
+| remove      | `Function` | ()=>{}  | no        | Realiza una animación y manda a llamar al metodo onClick con parametro id del componente Card |
+
+## Input
+
+| Prop        | Tipo     | Defecto | Requerido | Descripción                              |
+| ----------- | -------- | ------- | --------- | ---------------------------------------- |
+| type        | `String` | `text`  | no        | Valor del tipo del input que se generara |
+| placeholder | `String` | Vacio   | no        | Genera el texto provisional del input    |
+
+## InputSelect
+
+| Prop        | Tipo       | Defecto       | Requerido | Descripción                           |
+| ----------- | ---------- | ------------- | --------- | ------------------------------------- |
+| options     | `array`    | Array vacio   | si        | Genera las opciones a seleccionar     |
+| placeholder | `String`   | `Select`      | no        | Genera el texto provisional del input |
+| onChange    | `Function` | ()=>{}        | no        | Recupera los datos del input          |
+| width       | `String`   | `fit-content` | no        | Tamaño del componente                 |
+
+## FormInput
+
+| Prop  | Tipo     | Defecto | Requerido | Descripción                              |
+| ----- | -------- | ------- | --------- | ---------------------------------------- |
+| label | `String` | `Label` | no        | Genera el label del input                |
+| type  | `String` | `text`  | no        | Valor del tipo del input que se generara |
+
+## Button
+
+| Prop  | Tipo     | Defecto | Requerido | Descripción                    |
+| ----- | -------- | ------- | --------- | ------------------------------ |
+| label | `String` | `Label` | no        | Contenido del component button |
+| color | `String` | `#000`  | no        | Color del borde y texto        |
+
+Copyright © [Jhosep Ct](https://github.com/jhosepct)
