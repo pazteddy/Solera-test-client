@@ -13,4 +13,10 @@ export const Container = styled.div`
 export const Content = styled.div`
   padding: 20px 0;
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  @media (max-width: 768px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `;
