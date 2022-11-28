@@ -7,8 +7,13 @@ Este proyecto consiste en construir una aplicación, donde el usuario inicialmen
 <img src="https://github.com/jhosepct/Solera-test-client/blob/main/Design.png" title="Diseño Solera">
 
 - Diseño Movil
-
-<img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-1.png" title="Diseño Movil Solera 1" width="250"><img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-2.png" title="Diseño Movil Solera 3" width="250"><img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-3.png" title="Diseño Movil Solera 3" width="250">
+<div align="center" style="display:flex;" >
+  
+<img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-1.png" title="Diseño Movil Solera 1" width="250">
+<img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-2.png" title="Diseño Movil Solera 3" width="250">
+<img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-3.png" title="Diseño Movil Solera 3" width="250">
+  
+ </div>
 
 - Filtrar de servicio
 
