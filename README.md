@@ -17,7 +17,10 @@ Este proyecto consiste en construir una aplicación, donde el usuario inicialmen
 
 - Filtrar de servicio
 
+<div align="center" style="display:flex;" >
 #### ![Agregar](https://github.com/jhosepct/Solera-test-client/blob/main/filtrarSolera.gif)
+</div>
+
 
 - Agregar servicio
 
