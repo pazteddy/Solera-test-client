@@ -15,7 +15,7 @@ function Navbar({ data, logo, ...props }) {
 
   return (
     <Navegation {...props} {...state}>
-      <Logo>{logo && <img src={logo} alt="Solera-logo" />}</Logo>
+      <Logo {...state}>{logo && <img src={logo} alt="Solera-logo" />}</Logo>
       <Menu {...state}>
         {data.map((item, i) => {
           return (
