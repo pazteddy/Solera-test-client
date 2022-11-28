@@ -5,6 +5,12 @@ export const Title = styled.h1`
 `;
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 72px;
+`;
+
+export const Content = styled.div`
   padding: 20px 0;
   display: flex;
 `;
