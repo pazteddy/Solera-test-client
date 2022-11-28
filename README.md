@@ -66,7 +66,7 @@ $ npm run storybook
 
 - Las vistas están en: `localhost:6006`
 
-## Props
+## Componentes y respectivos props
 
 #### Navbar
 
@@ -85,14 +85,14 @@ $ npm run storybook
 | edit        | `Function` | ()=>{}  | no        | Realiza una animación y manda a llamar al metodo onClick con parametro id del componente Card |
 | remove      | `Function` | ()=>{}  | no        | Realiza una animación y manda a llamar al metodo onClick con parametro id del componente Card |
 
-## Input
+### Input
 
 | Prop        | Tipo     | Defecto | Requerido | Descripción                              |
 | ----------- | -------- | ------- | --------- | ---------------------------------------- |
 | type        | `String` | `text`  | no        | Valor del tipo del input que se generara |
 | placeholder | `String` | Vacio   | no        | Genera el texto provisional del input    |
 
-## InputSelect
+### InputSelect
 
 | Prop        | Tipo       | Defecto       | Requerido | Descripción                           |
 | ----------- | ---------- | ------------- | --------- | ------------------------------------- |
@@ -101,14 +101,14 @@ $ npm run storybook
 | onChange    | `Function` | ()=>{}        | no        | Recupera los datos del input          |
 | width       | `String`   | `fit-content` | no        | Tamaño del componente                 |
 
-## FormInput
+### FormInput
 
 | Prop  | Tipo     | Defecto | Requerido | Descripción                              |
 | ----- | -------- | ------- | --------- | ---------------------------------------- |
 | label | `String` | `Label` | no        | Genera el label del input                |
 | type  | `String` | `text`  | no        | Valor del tipo del input que se generara |
 
-## Button
+### Button
 
 | Prop  | Tipo     | Defecto | Requerido | Descripción                    |
 | ----- | -------- | ------- | --------- | ------------------------------ |
