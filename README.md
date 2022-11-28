@@ -39,6 +39,8 @@ $ npm run storybook
 
 ## Demo:
 
+- Solera App: [link](https://solera-app.vercel.app/)
+
 <div align="center" style="display:flex; flex-wrap: wrap;" >
   <img src="https://github.com/jhosepct/Solera-test-client/blob/main/Design.png" title="hover text">
   <img src="https://github.com/jhosepct/Solera-test-client/blob/main/Desktop.png" title="hover text">
