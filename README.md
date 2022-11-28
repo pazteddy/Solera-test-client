@@ -4,21 +4,27 @@ Este proyecto consiste en construir una aplicación, donde el usuario inicialmen
 
 - Demo: [Solera](https://solera-app.vercel.app/)
 
-<img src="https://github.com/jhosepct/Solera-test-client/blob/main/Design.png" title="hover text">
+<img src="https://github.com/jhosepct/Solera-test-client/blob/main/Design.png" title="Diseño Solera">
 
 - Diseño Movil
 
-<img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-1.png" title="imagen 1" width="200px"><img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-2.png" title="imagen 2" width="200px">
+<img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-1.png" title="Diseño Movil Solera 1" ><img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-2.png" title="Diseño Movil Solera 3" ><img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-3.png" title="Diseño Movil Solera 3" >
 
-- Lista de servicios
+- Filtrar de servicio
 
-<img src="https://github.com/jhosepct/Solera-test-client/blob/main/Desktop.png" title="hover text">
-<div align="center" style="display:flex; flex-wrap: wrap;" >
-</div>
+#### ![Agregar](https://github.com/jhosepct/Solera-test-client/blob/main/filtrarSolera.gif)
 
-- Filtrar servicios
+- Agregar servicio
 
-<img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-3.png" title="imagen 3"
+#### ![Agregar](https://github.com/jhosepct/Solera-test-client/blob/main/agregarSolera.gif)
+
+- Editar servicio
+
+#### ![Agregar](https://github.com/jhosepct/Solera-test-client/blob/main/editarSolera.gif)
+
+- Eliminar servicio
+
+#### ![Agregar](https://github.com/jhosepct/Solera-test-client/blob/main/eliminarSolera.gif)
 
 ## Paquetes usados:
 
