@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Solera Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project consists of building an application, where the user can initially see all his services, he can also filter the services by category. Also, the user can add, edit and delete a service.
 
-## Available Scripts
+##Packages we are using:
 
-In the project directory, you can run:
+- react-router-dom(^6.4.2): [link](https://reactrouter.com/docs/en/v6/getting-started/overview)
+- storybook: [link](https://storybook.js.org/)
+- emotion: [link](https://emotion.sh/docs/introduction)
+- react-icons: [link](https://react-icons.github.io/react-icons/)
+- uuidv4: [link](https://github.com/thenativeweb/uuidv4)
 
-### `npm start`
+## Quick start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Make sure your NodeJS and npm versions are up to date for `React ^18.2.0`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Install dependencies: `npm install` or `yarn`
+  A little intro about the installation.
 
-### `npm test`
+```
+$ npm i
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Start the server: `npm run start`
 
-### `npm run build`
+```
+$ npm run start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Views are on: `localhost:3000`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Start storybook: `npm run storybook`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$ npm run storybook
+```
 
-### `npm run eject`
+- Views are on: `localhost:6006`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Demo:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<div align="center" style="display:flex; flex-wrap: wrap;" >
+  <img src="https://github.com/jhosepct/Solera-test-client/blob/main/Design.png" title="hover text">
+  <img src="https://github.com/jhosepct/Solera-test-client/blob/main/Desktop.png" title="hover text">
+  <img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-1.png" title="hover text">
+  <img src="https://github.com/jhosepct/Solera-test-client/blob/main/iPhone13ProMax-2.png" title="hover text">
+</div>
