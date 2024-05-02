@@ -1,4 +1,4 @@
-# Solera Frontend
+## Solera Frontend
 
 Este proyecto consiste en construir una aplicación, donde el usuario inicialmente puede ver todos sus servicios, también puede filtrar los servicios por categoría. Además, el usuario puede agregar, editar y eliminar un servicio.
 
